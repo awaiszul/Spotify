@@ -1,27 +1,24 @@
-import React, { useContext } from 'react'
-import Sidebar from './Components/Sidebar'
-import Player from './Components/Player'
-import Display from './Components/Display'
-import { PlayerContext } from './Context/Playercontext'
+import { useContext } from "react";
+import Sidebar from "./Components/Sidebar";
+import Player from "./Components/Player";
+import Display from "./Components/Display";
+import { PlayerContext } from "./Context/Playercontext";
 
 const App = () => {
-
-  
-  const {audioRef, track} = useContext(PlayerContext);
-  const checked = useContext(audioRef)
+  const { audioRef, track } = useContext(PlayerContext);
+  const checked = useContext(audioRef);
   console.log(checked);
-  
 
   return (
-    <div className='h-screen bg-black'>
+    <div className="h-screen bg-black">
       <div className="h-[90%] flex">
-        <Sidebar/>
-        <Display/>
+        <Sidebar />
+        <Display />
       </div>
-      <Player/>
-      <audio ref = {audioRef} src={track.file} preload='auto'></audio>
+      <Player />
+      <audio ref={audioRef} src={track.file} preload="auto"></audio>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
