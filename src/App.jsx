@@ -7,7 +7,7 @@ import { PlayerContext } from "./Context/Playercontext";
 const App = () => {
   const { audioRef, track } = useContext(PlayerContext);
   const checked = useContext(audioRef);
-  console.log(checked);
+  // console.log(checked);
 
   return (
     <div className="h-screen bg-black">
